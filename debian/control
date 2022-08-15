@@ -1,0 +1,62 @@
+Source: xserver-xorg-input-libinput
+Section: x11
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libinput-dev (>= 1.4.901),
+ libudev-dev,
+ pkg-config,
+ quilt,
+ x11proto-dev (>= 2021.5),
+ xserver-xorg-dev (>= 2:1.15.99),
+ xutils-dev,
+Standards-Version: 4.6.0
+Homepage: https://www.x.org
+#Vcs-Git
+#Vcs-Browser
+
+Package: xserver-xorg-input-libinput
+Architecture: linux-any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${xinpdriver:Depends},
+Provides:
+ ${xinpdriver:Provides}
+Description: X.Org X server -- libinput input driver
+ This package provides the driver for input devices using libinput library.
+ It can handle keyboards, mice and touchpads, and essentially replaces the
+ separate -evdev and -synaptics drivers.
+ .
+ This package is built from the X.org xf86-input-libinput driver module.
+
+Package: xserver-xorg-input-libinput-dev
+Section: libdevel
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: X.Org X server -- libinput input driver (development headers)
+ This package provides the development headers for the libinput input driver
+ found in xserver-xorg-input-libinput. Non-developers likely have little use
+ for this package.
+ .
+ This package is built from the X.org xf86-input-libinput driver module.
+
+
+Package: xserver-xorg-input-libinput-udeb
+XC-Package-Type: udeb
+Section: debian-installer
+Architecture: linux-any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${xinpdriver:Depends},
+ udev-udeb,
+Provides:
+ ${xinpdriver:Provides}
+Description: X.Org X server -- libinput input driver
+ This is a udeb, or a microdeb, for the debian-installer.

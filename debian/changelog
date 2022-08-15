@@ -1,0 +1,5 @@
+xserver-xorg-input-libinput (1.2.1-deepin) stable; urgency=medium
+
+  * ['Rebuild  against by  current gcc 11.2']
+
+ -- Deepin Packages Builder <packages@deepin.org>  Wed, 10 Aug 2022 22:33:25 +0800
