@@ -12,8 +12,14 @@
 /* libinput_event_pointer_get_scroll_value_v120() is available */
 #undef HAVE_LIBINPUT_AXIS_VALUE_V120
 
+/* libinput_device_config_click_set_clickfinger_button_map() is available */
+#undef HAVE_LIBINPUT_CLICKFINGER_BUTTON_MAP
+
 /* libinput_config_accel_create() is available */
 #undef HAVE_LIBINPUT_CUSTOM_ACCEL
+
+/* libinput_tablet_tool_config_pressure_range_set() is available */
+#undef HAVE_LIBINPUT_PRESURE_RANGE
 
 /* libinput_device_config_scroll_get_button_lock() is available */
 #undef HAVE_LIBINPUT_SCROLL_BUTTON_LOCK
